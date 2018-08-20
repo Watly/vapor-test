@@ -11,20 +11,24 @@ To test the code:
 
 2. run the following maven command
 
-```mvn clean install```
+`mvn clean install`
 
-In each project folder with this sequence:
+In each project folder in this order:
 
-```vapor-model```
-```vapor-dsl/co.watly.vapor.dsl``` <-- this tooks very long time, so every time (except first) you edit its code, you better run ```mvn -o clean install```, if you did not introduce any new dependency to download
-```vapor-controller```
-```vapor-test```
+* `vapor-model`
 
-2a. The project ```vapor-dsl/co.watly.vapor.dsl.ui``` is just useful to run the Vapor DSL's editor as Eclipse Plugin
+* `vapor-dsl/co.watly.vapor.dsl` <-- this tooks very long time, so every time (except first) you edit its code, you better run `mvn -o clean install`, if you did not introduce any new dependency to download
+
+* `vapor-controller`
+
+* `vapor-test`
+
+2a. The project `vapor-dsl/co.watly.vapor.dsl.ui` is just useful to run the Vapor DSL's editor as Eclipse Plugin
 
 3. Create a JSON file reporting star and end coordinates like this:
 
-```{
+```
+{
 	"start" : {
 		"latitude": 45.798651,
 		"longitude" : 13.212938,
@@ -37,8 +41,9 @@ In each project folder with this sequence:
 	},
 	"maxHeight" : 800,
 	"weight" : 30
-}```
+}
+```
 
-4. run the ```vapor-test``` code using the following command:
+4. run the `vapor-test` code using the following command:
 
-```java -javaagent:./bin/ea-async-1.2.0.jar -cp "./*;bin/*" co.watly.vapor.test.Main path/to/itinerary.json```
+`java -javaagent:./bin/ea-async-1.2.0.jar -cp "./*;bin/*" co.watly.vapor.test.Main path/to/itinerary.json`
